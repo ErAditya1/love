@@ -7,15 +7,26 @@ window.addEventListener("DOMContentLoaded", function () {
 });
 
 window.addEventListener("load", function () {
+  
   loader.style.display = "none";
   setInterval(()=>{
     heartGenerator()
   },200)
   console.log("Page is completly loaded");
 });
+window.addEventListener("click", function () {
+  let audio = document.getElementById("music");
+    audio.play();
 
+});
+
+window.addEventListener("dblclick", function () {
+  let audio = document.getElementById("music");
+    audio.pause();
+
+});
   var typed = new Typed(".logo-auto-input", {
-    strings: ["Dear ❝love❞ ❤️💞", "My love 💞💓", "I love You 💕💕💖"],
+    strings: ["Dear ❝Bhaiya 💞 Bhabhi❞ ", "Happy Marriage Anniversary "],
     typeSpeed: 150,
     Delay: 5000,
     loop: true
@@ -30,7 +41,7 @@ window.addEventListener("load", function () {
  
   document.addEventListener("mousemove", function(e){
     
-    let heartAnimation = document.querySelector('.heartAnimation')
+    let heartAnimation = document.querySelector('.hoverHeartAnimation')
     
     let heart = document.createElement('span')
     
@@ -76,7 +87,7 @@ window.addEventListener("load", function () {
   heartAnimation.appendChild(heart);
   setTimeout(function(){
     heart.remove();
-  }, 1500);
+  }, 2000);
 
 }
 

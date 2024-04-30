@@ -152,14 +152,16 @@ header{
    
   }
   
-  .heartAnimation{
+  .heartAnimation , .hoverHeartAnimation{
+    z-index: -1;
     position: fixed;
     top: 0;
     z-index: 6;
     background: red;
   }
  
-  .heartAnimation span{
+  .heartAnimation span , .hoverHeartAnimation span{
+    z-index: -1;
     position: absolute;
     pointer-events: none;
     filter:drop-shadow(0 0 15px rgba(0, 0, 0, 0.5));
@@ -175,7 +177,7 @@ header{
       opacity: 1;
     }
   }
-  .heartAnimation span::before{
+  .heartAnimation span::before ,.hoverHeartAnimation  span::before{
     content: '';
     position: absolute;
     width: 100%;
@@ -263,9 +265,9 @@ header{
   font-size: 20px;
   height: 30px;
   font-weight: 600;
-  padding: 10px;
+  padding: 5px;
   margin: 10px;
-  width: 180px;
+  width: 120px;
   background: #ebeef1;
   cursor: pointer;
   border: none;
